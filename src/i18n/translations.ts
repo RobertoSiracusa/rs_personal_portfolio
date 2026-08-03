@@ -99,7 +99,7 @@ const en: Translation = {
   about: {
     title: "About Me",
     description:
-      "I am a CS student from Valencia, Venezuela. I build mobile apps, chatbots, and modern web applications. My expertise includes Machine Learning, Mobile Development, and Full-Stack Web Development with React, Node.js, and Python. Currently building many different mobile and web applications. I have a competitive programming mindset and a deep passion for automation. I speak Spanish natively, English at a C1 advanced level, and German at an A2 elementary level.",
+      "I am a Full Stack Developer from Valencia, Venezuela. Currently studying Computer Science I build mobile apps, chatbots, and modern web applications. My expertise includes Machine Learning, Mobile Development, and Full-Stack Web Development with React, Node.js, and Python. Currently building many different mobile and web applications. I have a competitive programming mindset and a deep passion for automation. I speak Spanish natively, English at a C1 advanced level, and German at an A2 elementary level.",
     motto: "For me, Coding is art.",
   },
   experiences: [
@@ -212,22 +212,46 @@ const en: Translation = {
       id: 1,
       title: "GasliApp",
       category: "Mobile App",
-      technologies: "React Native, Supabase, Node.js, Express, Typescript, Android, iOS",
+      technologies: "React Native & Expo,PostgreSQL, PrismaORM, Node.js, Express, Typescript, Android, iOS",
       image: gasliLogo,
       description:
         "A mobile app that provides real-time monitoring status of Gas Stations in Venezuela. Features include location-based  index, historical data visualization.",
     },
     {
       id: 2,
+      title: "Under NDA proyect (Work in progress)",
+      category: "Mobile Videogame",
+      technologies: "Pythorch, FastAPI, Websockets, TensorFlow, React Native & Expo, Vite, PostgreSQL,HuggingFace, TailwindCSS",
+      image: sodapalLogo,
+      description: "A mobile game currently in development, integrates ML and a specialized LLM for users to play against an AI-powered opponent. The game is designed to provide a unique and engaging experience, leveraging advanced machine learning techniques to create a challenging and adaptive gameplay environment.",
+    },
+    {
+      id: 3,
+      title: "Under NDA proyect",
+      category: "Workflow Automatization",
+      technologies: "N8N, Python,Django, Microsoft Excel, MySql",
+      image: sodapalLogo,
+      description: "Variety of N8N workflows for a private company, improving personell logistic and operation capacity",
+    },
+    {
+      id: 4,
+      title: "Under NDA proyect",
+      category: "BI / Data Analysis",
+      technologies: "N8N, Python,Django, Pythorch, Pandas,NumPy,OpenCV, MySql",
+      image: sodapalLogo,
+      description: "Especialized BI / Data Analysis program for a private company that uses around 400k data inputs for estimating operations and results. ",
+    },
+    {
+      id: 5,
       title: "BCV Api",
       category: "API / Data",
       technologies: "PHP, Python, Java,Typescript,Javascript, Web Scraping, REST API",
       image: "",
       description:
-        "An API that provides real-time exchange rates from the Central Bank of Venezuela (BCV). It scrapes the BCV website for accurate and up-to-date currency data, making it accessible for developers and applications.",
+        "MultiLanguage API that provides real-time exchange rates from the Central Bank of Venezuela (BCV). It scrapes the BCV website for accurate and up-to-date currency data, making it accessible for developers and applications.",
     },
     {
-      id: 3,
+      id: 6,
       title: "Minecraft Syncronizer",
       category: "Cloud / Automation",
       technologies: "Python, AWS, Google Cloud, Azure, Automation, Scripting",
@@ -236,7 +260,7 @@ const en: Translation = {
         "A cloud-based automation tool for synchronizing Minecraft worlds across different platforms.",
     },
     {
-      id: 4,
+      id: 7,
       title: "Soon to be announced",
       category: "Web Service",
       technologies: "Typescript, Python, Django, React, Next.js, Node.js, AWS, Google Cloud",
@@ -245,7 +269,7 @@ const en: Translation = {
         "A soon-to-be-announced web service that offers a web platform for enterprises to market and sell their products online, providing a seamless e-commerce experience for both businesses and customers.",
     },
     {
-      id: 5,
+      id: 8,
       title: "SodaPal",
       category: "Mobile App",
       technologies: "React Native, Supabase, Node.js, Express, Typescript, Android",
@@ -295,8 +319,8 @@ const en: Translation = {
     landing: {
       hello: "Hello! I'm",
       an: "An",
-      role1: "CSE Student",
-      role2: "Full-Stack Developer",
+      role1: "Full-Stack ",
+      role2: "Developer",
     },
     whatIDo: { skillsetTools: "Skillset & tools" },
     career: {
@@ -346,7 +370,7 @@ const es: Translation = {
     fullName: "Roberto Siracusa",
     title: "Desarrollador Full-Stack",
     description:
-      "Estudiante de Ingeniería en Computación que construye sistemas inteligentes y aplicaciones web modernas. Apasionado por el machine learning, deep learning y la creación de agentes autónomos de nueva generación.",
+      "Desarollador Full Stack que construye sistemas inteligentes y aplicaciones web modernas. Apasionado por el machine learning, deep learning y la creación de agentes autónomos de nueva generación. Actualmente estudiando Ingeniería en Computación",
   },
   social: {
     github: "RobertoSiracusa",
@@ -361,7 +385,7 @@ const es: Translation = {
   about: {
     title: "Sobre Mí",
     description:
-      "Soy estudiante de Ingeniería en Computación de Valencia, Venezuela. Desarrollo apps móviles, chatbots y aplicaciones web modernas. Mi experiencia incluye Machine Learning, Desarrollo Móvil y Desarrollo Web Full-Stack con React, Node.js y Python. Actualmente construyo diversas aplicaciones móviles y web. Tengo una mentalidad de programación competitiva y una profunda pasión por la automatización. Hablo español nativo, inglés nivel C1 avanzado y alemán nivel A2 elemental.",
+      "Soy Desarollador Full Stack con 2 años de experiencia formalizada. Desarrollo apps móviles, chatbots y aplicaciones web modernas. Mi experiencia incluye Machine Learning, Desarrollo Móvil y Desarrollo Web Full-Stack con React, Node.js y Python. Actualmente estudio Ingeniería en Computación de Valencia, Venezuela. Tengo una mentalidad de programación competitiva y una profunda pasión por la automatización. Hablo español nativo, inglés nivel C1 avanzado y alemán nivel A2 elemental.",
     motto: "Para mí, programar es arte.",
   },
   experiences: [
