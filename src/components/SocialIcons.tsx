@@ -3,9 +3,9 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
-import { TbNotes } from "react-icons/tb";
+// import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
-import HoverLinks from "./HoverLinks";
+// import HoverLinks from "./HoverLinks";
 import { useT } from "../i18n/LanguageProvider";
 
 const SocialIcons = () => {
@@ -70,12 +70,14 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
+      {/* ponytail: resume button hidden on request. Uncomment to restore (both langs use t.ui.cvFile).
       <a className="resume-button" href={t.ui.cvFile} target="_blank" rel="noopener noreferrer">
         <HoverLinks text={t.ui.socialIcons.resume} />
         <span>
           <TbNotes />
         </span>
       </a>
+      */}
     </div>
   );
 };

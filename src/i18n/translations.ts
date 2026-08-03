@@ -1,6 +1,7 @@
 import gasliLogo from "../assets/gasliLogo.jpeg";
 import sodapalLogo from "../assets/sodapallogo-removebg-preview.png";
 import minecraftLogo from "../assets/minecraftlogo.svg";
+import ndaImg from "../assets/NDA_img.png";
 
 export type Lang = "en" | "es";
 
@@ -99,7 +100,7 @@ const en: Translation = {
   about: {
     title: "About Me",
     description:
-      "I am a Full Stack Developer from Valencia, Venezuela. Currently studying Computer Science I build mobile apps, chatbots, and modern web applications. My expertise includes Machine Learning, Mobile Development, and Full-Stack Web Development with React, Node.js, and Python. Currently building many different mobile and web applications. I have a competitive programming mindset and a deep passion for automation. I speak Spanish natively, English at a C1 advanced level, and German at an A2 elementary level.",
+      "I am a Full Stack Developer from Valencia, Venezuela. Currently studying Computer Science. I build mobile apps, chatbots, and modern web applications. My expertise includes Machine Learning, Mobile Development, and Full-Stack Web Development with React, Node.js, and Python. Currently building many different mobile and web applications. I have a competitive programming mindset and a deep passion for automation. I speak Spanish natively, English at a C1 advanced level, and German at an A2 elementary level.",
     motto: "For me, Coding is art.",
   },
   experiences: [
@@ -222,15 +223,15 @@ const en: Translation = {
       title: "Under NDA proyect (Work in progress)",
       category: "Mobile Videogame",
       technologies: "Pythorch, FastAPI, Websockets, TensorFlow, React Native & Expo, Vite, PostgreSQL,HuggingFace, TailwindCSS",
-      image: sodapalLogo,
-      description: "A mobile game currently in development, integrates ML and a specialized LLM for users to play against an AI-powered opponent. The game is designed to provide a unique and engaging experience, leveraging advanced machine learning techniques to create a challenging and adaptive gameplay environment.",
+      image: ndaImg,
+      description: "A mobile game in development that integrates ML and a specialized LLM, letting users play against an adaptive AI-powered opponent.",
     },
     {
       id: 3,
       title: "Under NDA proyect",
       category: "Workflow Automatization",
       technologies: "N8N, Python,Django, Microsoft Excel, MySql",
-      image: sodapalLogo,
+      image: ndaImg,
       description: "Variety of N8N workflows for a private company, improving personell logistic and operation capacity",
     },
     {
@@ -238,7 +239,7 @@ const en: Translation = {
       title: "Under NDA proyect",
       category: "BI / Data Analysis",
       technologies: "N8N, Python,Django, Pythorch, Pandas,NumPy,OpenCV, MySql",
-      image: sodapalLogo,
+      image: ndaImg,
       description: "Especialized BI / Data Analysis program for a private company that uses around 400k data inputs for estimating operations and results. ",
     },
     {
@@ -318,7 +319,7 @@ const en: Translation = {
     nav: { about: "ABOUT", work: "WORK", contact: "CONTACT" },
     landing: {
       hello: "Hello! I'm",
-      an: "An",
+      an: "A",
       role1: "Full-Stack ",
       role2: "Developer",
     },
@@ -498,22 +499,49 @@ const es: Translation = {
       id: 1,
       title: "GasliApp",
       category: "App Móvil",
-      technologies: "React Native, Supabase, Node.js, Express, Typescript, Android, iOS",
+      technologies: "React Native & Expo,PostgreSQL, PrismaORM, Node.js, Express, Typescript, Android, iOS",
       image: gasliLogo,
       description:
         "Una app móvil que provee monitoreo en tiempo real del estado de las estaciones de servicio en Venezuela. Incluye índice basado en ubicación y visualización de datos históricos.",
     },
     {
       id: 2,
-      title: "BCV Api",
-      category: "API / Datos",
-      technologies: "PHP, Python, Java, Typescript, Javascript, Web Scraping, REST API",
-      image: "",
+      title: "Proyecto bajo NDA (En desarrollo)",
+      category: "Videojuego Móvil",
+      technologies: "Pythorch, FastAPI, Websockets, TensorFlow, React Native & Expo, Vite, PostgreSQL,HuggingFace, TailwindCSS",
+      image: ndaImg,
       description:
-        "Una API que provee tasas de cambio en tiempo real del Banco Central de Venezuela (BCV). Hace web scraping del sitio del BCV para obtener datos precisos y actualizados, accesibles para desarrolladores y aplicaciones.",
+        "Videojuego móvil en desarrollo que integra ML y un LLM especializado, permitiendo jugar contra un oponente adaptativo impulsado por IA.",
     },
     {
       id: 3,
+      title: "Proyecto bajo NDA",
+      category: "Automatización de Flujos de Trabajo",
+      technologies: "N8N, Python,Django, Microsoft Excel, MySql",
+      image: ndaImg,
+      description:
+        "Variedad de flujos de trabajo en N8N para una empresa privada, mejorando la logística del personal y la capacidad operativa.",
+    },
+    {
+      id: 4,
+      title: "Proyecto bajo NDA",
+      category: "BI / Análisis de Datos",
+      technologies: "N8N, Python,Django, Pythorch, Pandas,NumPy,OpenCV, MySql",
+      image: ndaImg,
+      description:
+        "Programa especializado de BI / Análisis de Datos para una empresa privada que utiliza alrededor de 400 mil entradas de datos para estimar operaciones y resultados.",
+    },
+    {
+      id: 5,
+      title: "BCV Api",
+      category: "API / Datos",
+      technologies: "PHP, Python, Java,Typescript,Javascript, Web Scraping, REST API",
+      image: "",
+      description:
+        "API multilenguaje que provee tasas de cambio en tiempo real del Banco Central de Venezuela (BCV). Hace web scraping del sitio del BCV para obtener datos precisos y actualizados, accesibles para desarrolladores y aplicaciones.",
+    },
+    {
+      id: 6,
       title: "Minecraft Syncronizer",
       category: "Nube / Automatización",
       technologies: "Python, AWS, Google Cloud, Azure, Automatización, Scripting",
@@ -522,7 +550,7 @@ const es: Translation = {
         "Herramienta de automatización en la nube para sincronizar mundos de Minecraft entre diferentes plataformas.",
     },
     {
-      id: 4,
+      id: 7,
       title: "Próximamente",
       category: "Servicio Web",
       technologies: "Typescript, Python, Django, React, Next.js, Node.js, AWS, Google Cloud",
@@ -531,7 +559,7 @@ const es: Translation = {
         "Servicio web a anunciarse próximamente, que ofrece una plataforma para que las empresas comercialicen y vendan sus productos online, brindando una experiencia e-commerce fluida tanto para negocios como clientes.",
     },
     {
-      id: 5,
+      id: 8,
       title: "SodaPal",
       category: "App Móvil",
       technologies: "React Native, Supabase, Node.js, Express, Typescript, Android",
@@ -581,8 +609,8 @@ const es: Translation = {
     landing: {
       hello: "¡Hola! Soy",
       an: "",
-      role1: "Estudiante de Computación",
-      role2: "Desarrollador Full-Stack",
+      role1: "Desarrollador ",
+      role2: "Full-Stack",
     },
     whatIDo: { skillsetTools: "Habilidades y herramientas" },
     career: {
