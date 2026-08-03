@@ -645,8 +645,8 @@ const es: Translation = {
     },
     loading: {
       welcome: "Bienvenido",
-      role1: "Estudiante de Computación",
-      role2: "Desarrollador Full Stack",
+      role1: "Desarollador Full Stack",
+      role2: "Desarollador Full Stack",
     },
     socialIcons: { resume: "CV" },
     languageToggle: { label: "EN" },
