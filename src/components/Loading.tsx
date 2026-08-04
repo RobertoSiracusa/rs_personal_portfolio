@@ -23,15 +23,20 @@ const Loading = () => {
 
   useEffect(() => {
     if (!isLoaded) return;
-    import("./utils/initialFX").then((module) => {
-      setClicked(true);
-      setTimeout(() => {
-        if (module.initialFX) {
-          module.initialFX();
-        }
+    import("./utils/initialFX")
+      .then((module) => {
+        setClicked(true);
+        setTimeout(() => {
+          if (module.initialFX) {
+            module.initialFX();
+          }
+          setIsLoading(false);
+        }, 900);
+      })
+      .catch(() => {
+        setClicked(true);
         setIsLoading(false);
-      }, 900);
-    });
+      });
   }, [isLoaded]);
 
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {

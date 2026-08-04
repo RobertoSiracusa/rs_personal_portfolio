@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import Lenis from "lenis";
 import "./styles/Navbar.css";
 import { useLanguage } from "../i18n/LanguageProvider";
+import { registerLenis, unregisterLenis } from "./utils/scrollControl";
 
 gsap.registerPlugin(ScrollTrigger);
 export let lenis: Lenis | null = null;
@@ -13,7 +14,7 @@ const Navbar = () => {
   const { t, toggleLang } = useLanguage();
   useEffect(() => {
     // Initialize Lenis smooth scroll
-    lenis = new Lenis({
+    const instance = new Lenis({
       duration: 1.7,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
@@ -23,16 +24,18 @@ const Navbar = () => {
       touchMultiplier: 2,
       infinite: false,
     });
+    lenis = instance;
 
-    // Start paused
-    lenis.stop();
+    // Arranca detenido SOLO si el scroll todavia no fue liberado.
+    registerLenis(instance);
 
     // Handle smooth scroll animation frame
+    let rafId = 0;
     function raf(time: number) {
-      lenis?.raf(time);
-      requestAnimationFrame(raf);
+      instance.raf(time);
+      rafId = requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     // Handle navigation links
     let links = document.querySelectorAll(".header ul a");
@@ -57,12 +60,15 @@ const Navbar = () => {
     });
 
     // Handle resize
-    window.addEventListener("resize", () => {
-      lenis?.resize();
-    });
+    const onResize = () => instance.resize();
+    window.addEventListener("resize", onResize);
 
     return () => {
-      lenis?.destroy();
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("resize", onResize);
+      unregisterLenis(instance);
+      instance.destroy();
+      if (lenis === instance) lenis = null;
     };
   }, []);
   return (

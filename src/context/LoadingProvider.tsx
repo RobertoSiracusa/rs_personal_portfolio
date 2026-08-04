@@ -22,13 +22,17 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
 
   useEffect(() => {
     if (window.innerWidth <= 768) {
-      import("../components/utils/initialFX").then((module) => {
-        if (module.initialFX) {
-          setTimeout(() => {
-            module.initialFX();
-          }, 100);
-        }
-      });
+      import("../components/utils/initialFX")
+        .then((module) => {
+          if (module.initialFX) {
+            setTimeout(() => module.initialFX(), 100);
+          }
+        })
+        .catch(async () => {
+          // Chunk caido en red movil: liberar igual el scroll, sin animaciones.
+          const { releaseScroll } = await import("../components/utils/scrollControl");
+          releaseScroll();
+        });
     }
   }, []);
 
